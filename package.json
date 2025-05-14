@@ -2,9 +2,10 @@
   "name": "dvk",
   "version": "1.0.0",
   "description": "dvk website",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "ts-node -T app.ts"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,19 @@
   },
   "homepage": "https://github.com/davidvankriedt/dvk#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
-    "path": "^0.12.7"
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "tsc": "^2.0.4"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.1",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.15.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
 }
