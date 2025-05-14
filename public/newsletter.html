@@ -6,9 +6,9 @@
     <title>newsletter</title>
 </head>
 <body>
-    <form id="newsletter-form" method="POST" action="/subscribe">
-        <h2>Join the newsletter</h2>
-        <input type="email" name="email" autocomplete="email"/>
+    <form method="POST" action="/subscribe">
+        <label for="email">Join the newsletter</label>
+        <input type="email" name="email" required/>
         <button type="submit">Subscribe</button>
     </form>
 </body>
