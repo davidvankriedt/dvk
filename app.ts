@@ -2,6 +2,9 @@ import express, { json, Request, Response } from 'express';
 import cors from 'cors';
 import path from 'path';
 import morgan from 'morgan';
+import { sequelize, connectToDatabase } from './db';
+import { Subscriber } from './models/Subscriber';
+import { PORT } from './config';
 
 // SETUP
 
@@ -27,12 +30,21 @@ app.get('/newsletter', (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, 'public', 'newsletter.html'));
 });
 
-app.post('/subscribe', (req: Request, res: Response) => {
-  console.log(req.body.email);
+app.post('/subscribe', async (req: Request, res: Response) => {
+  const newSub = await Subscriber.create({ email: req.body.email });
+  const subscribers = await Subscriber.findAll();
   
-  res.send({ "email" : req.body.email });
+  console.log('Subscribers: ', JSON.stringify(subscribers, null, 2));
+
 });
 
-app.listen(port, () => {
+async function start() {
+  await connectToDatabase();
+
+  app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-});
+  });
+}
+
+start();
+
