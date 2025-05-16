@@ -5,7 +5,8 @@
   "main": "app.ts",
   "scripts": {
     "test": "jest",
-    "start": "ts-node -T app.ts"
+    "build": "tsc"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
