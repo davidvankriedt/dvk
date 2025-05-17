@@ -5,8 +5,9 @@
   "main": "app.ts",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
-    "start": "node app.js"
+    "dev": "ts-node src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -28,8 +29,7 @@
     "path": "^0.12.7",
     "pg": "^8.16.0",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.37.7",
-    "tsc": "^2.0.4"
+    "sequelize": "^6.37.7"
   },
   "keywords": [],
   "devDependencies": {

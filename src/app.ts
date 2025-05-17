@@ -1,6 +1,7 @@
 import express, { json, Request, Response } from 'express';
 import cors from 'cors';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import morgan from 'morgan';
 import { sequelize, connectToDatabase } from './db';
 import { Subscriber } from './models/Subscriber';
@@ -19,18 +20,14 @@ app.use(morgan('dev'));
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // ROUTES
 
 app.get('/', (req: Request, res: Response) => {
 });
 
-app.get('/newsletter', (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, 'public', 'newsletter.html'));
-});
-
-app.post('/subscribe', async (req: Request, res: Response) => {
+app.post('/subscribeNewsletter', async (req: Request, res: Response) => {
   const newSub = await Subscriber.create({ email: req.body.email });
   const subscribers = await Subscriber.findAll();
   
