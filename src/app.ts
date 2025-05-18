@@ -25,8 +25,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.post('/subscribeNewsletter', async (req: Request, res: Response) => {
   const newSub = await Subscriber.create({ email: req.body.email });
   const subscribers = await Subscriber.findAll();
-  console.log('Subscribers: ', JSON.stringify(subscribers, null, 2));
-  res.redirect(path.join(__dirname, '../public/meme.html'));
+  console.log('NEW SUBSCRIBER');
 });
 
 async function start() {
