@@ -22,9 +22,6 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // ROUTES
 
-app.get('/', (req: Request, res: Response) => {
-});
-
 app.post('/subscribeNewsletter', async (req: Request, res: Response) => {
   const newSub = await Subscriber.create({ email: req.body.email });
   const subscribers = await Subscriber.findAll();

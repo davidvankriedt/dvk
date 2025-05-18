@@ -9,10 +9,10 @@ export const sequelize = new Sequelize(DB_URL, {
     dialect: "postgres",
     logging: false,
     dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
-        },
+    ssl: {
+        require: true,
+        rejectUnauthorized: false, // <== This is what fixes the self-signed error
+    },
     },
 });
 
