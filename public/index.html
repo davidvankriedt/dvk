@@ -9,21 +9,18 @@
 </head>
 
 
-<!--
-    THINGS TO DO: 
-        - Add email box to add users to newsletter.
-        - Clean up links to media. +
-        - Add more content to about page OR cut it out for now. +
--->
+<body>
+  <img class="bg-image" src="./images/main-background.jpg" alt="Background" />
 
+  <div class="center-content">
+    <img class="logo" src="./images/dvk-logo.png" alt="Logo" />
 
-
-<body id="homePage">
-    <main class="homeContent">
-
-    <div>
-        <a href="/newsletter.html">Sign up to newsletter</a>
-    </div>
-    
+    <form class="form" method="POST" action="/subscribeNewsletter">
+      <input type="email" name="email" placeholder="user@example.com" />
+      <button type="submit" class="submitButton">Subscribe</button>
+    </form>
+  </div>
 </body>
+
+
 </html>
