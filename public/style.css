@@ -2,7 +2,47 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: sans-serif;
+  background-color: #ff5757;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nav-bar {
+  position: fixed;
+  list-style-type: none;
+  margin-left: 100px;
+}
+
+li {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-right: 100px;
+  opacity: 0.9;
+}
+
+.title {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: clamp(250px, 110vw, 55vw);
+  height: auto;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.9;
+  margin-left: -0.5em;
+  margin-bottom: -1.2em;
+}
+
+.line {
+  position: fixed;
+  height: 100%;
+  top: -200px;
+  right: -500px;
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
 }
 
 .bg-image {
