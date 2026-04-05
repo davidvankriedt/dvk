@@ -7,7 +7,9 @@
     "test": "jest",
     "dev": "ts-node src/app.ts",
     "build": "tsc",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,7 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.15.17",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "wrangler": "^4.80.0"
   }
 }
