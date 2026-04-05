@@ -15,22 +15,20 @@ body, html {
   margin-left: 100px;
 }
 
-li {
+button {
   font-size: 1.5em;
   display: inline-block;
   margin-right: 100px;
   opacity: 0.9;
-}
+  border-style: none;
+  background-color: transparent;
 
-button {
-    text-decoration: none;
-    color: rgb(5, 5, 5);
-  }
+}
 
 button:hover {
   color: grey;
   transition: all 0.2s ease 0s; 
-  -webkit-transition: all 0.2s ease 0s; 
+  -webkit-transition: all 0.2s ease 0s;
 }
 
 
