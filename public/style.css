@@ -22,12 +22,12 @@ li {
   opacity: 0.9;
 }
 
-a {
+button {
     text-decoration: none;
     color: rgb(5, 5, 5);
   }
 
-a:hover {
+button:hover {
   color: grey;
   transition: all 0.2s ease 0s; 
   -webkit-transition: all 0.2s ease 0s; 
